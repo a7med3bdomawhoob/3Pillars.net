@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Books.module.css";
+import * as XLSX from 'xlsx';
 import axios from "axios";
 const UserForm = () => {
   const [formData, setFormData] = useState({
@@ -179,13 +180,32 @@ const UserForm = () => {
 
   const handleInputChange = async (e) => {
     console.log(e.target.value);
-
     setSearchQuery(e.target.value); // Update state with input value
-
   };
+
+
+
+  const exportToExcel = () => {
+    // Create a new worksheet from the data
+    const ws = XLSX.utils.json_to_sheet(books);
+    // Create a new workbook
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '3PillarsSheet');
+    // Write the workbook to a file and trigger download
+    XLSX.writeFile(wb, 'data.xlsx');
+};
+
 
   return (
     <div>
+      <div>
+        <button onClick={exportToExcel} className="btn btn-success">
+          Export to Excel
+        </button>
+      </div>
+
+
+
       <div>
         <label htmlFor="search">Search By Book Name</label>
         <input
