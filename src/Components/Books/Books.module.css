@@ -1,0 +1,158 @@
+/* UserForm.css */
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+form button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+form button[type="button"] {
+  background-color: #007bff;
+  color: white;
+}
+
+form button[type="button"]:nth-child(3) {
+  background-color: #f44336;
+  color: white;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+label {
+  color: blue;
+}
+
+
+
+
+
+
+
+
+/* for table  */
+
+
+
+/* General Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #e53935;
+  color: white;
+}
+
+td {
+  background-color: rgb(10, 10, 31);
+}
+
+/* Hover effect for rows */
+tr:hover {
+  background-color: gray;
+}
+
+/* Button Styles */
+button {
+  padding: 6px 12px;
+  margin: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: blue;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Edit and Delete button colors */
+button:nth-child(1) {
+  background-color: #008CBA;
+  /* Edit button */
+}
+
+button:nth-child(2) {
+  background-color: #f44336;
+  /* Delete button */
+}
+
+button:nth-child(1):hover {
+  background-color: #007B9F;
+  /* Edit hover */
+}
+
+button:nth-child(2):hover {
+  background-color: #e53935;
+  /* Delete hover */
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+}
